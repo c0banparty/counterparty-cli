@@ -33,6 +33,9 @@ CONFIG_ARGS = [
     [('--no-check-asset-conservation',), {'action': 'store_true', 'default': False, 'help': 'Skip asset conservation checking (default: false)'}],
     [('--p2sh-dust-return-pubkey',), {'help': 'pubkey to receive dust when multisig encoding is used for P2SH source (default: pubkey from counterparty foundation)'}],
 
+    [('--indexd-connect',), {'default': 'localhost', 'help': 'the hostname or IP of the indexd server'}],
+    [('--indexd-port',), {'type': int, 'help': 'the indexd server port to connect to'}],
+
     [('--rpc-host',), {'default': 'localhost', 'help': 'the IP of the interface to bind to for providing JSON-RPC API access (0.0.0.0 for all interfaces)'}],
     [('--rpc-port',), {'type': int, 'help': 'port on which to provide the {} JSON-RPC API'.format(config.APP_NAME)}],
     [('--rpc-user',), {'default': 'rpc', 'help': 'required username to use the {} JSON-RPC API (via HTTP basic auth)'.format(config.APP_NAME)}],
@@ -126,6 +129,7 @@ def main():
                                 backend_ssl=args.backend_ssl,
                                 backend_ssl_no_verify=args.backend_ssl_no_verify,
                                 backend_poll_interval=args.backend_poll_interval,
+                                indexd_connect=args.indexd_connect, indexd_port=args.indexd_port,
                                 rpc_host=args.rpc_host, rpc_port=args.rpc_port, rpc_user=args.rpc_user,
                                 rpc_password=args.rpc_password, rpc_no_allow_cors=args.rpc_no_allow_cors,
                                 requests_timeout=args.requests_timeout,
