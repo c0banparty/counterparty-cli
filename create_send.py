@@ -29,9 +29,9 @@ config.REQUESTS_TIMEOUT = 1
 
 
 # c0band
-CBN_RPC_USER = os.environ['RPC_USER'] if 'RPC_USER' in os.environ else 'c0ban'
-CBN_RPC_PASSWORD = os.environ['RPC_PASSWORD'] if 'RPC_PASSWORD' in os.environ else 'c0ban'
-CBN_RPC_HOST = os.environ['RPC_HOST'] if 'RPC_HOST' in os.environ else 'party-c0band-lyra2rev2'
+CBN_RPC_USER = os.environ['RPC_USER'] if 'RPC_USER' in os.environ else 'test'
+CBN_RPC_PASSWORD = os.environ['RPC_PASSWORD'] if 'RPC_PASSWORD' in os.environ else 'test'
+CBN_RPC_HOST = os.environ['RPC_HOST'] if 'RPC_HOST' in os.environ else 'c0ban'
 CBN_RPC_PORT = os.environ['RPC_PORT'] if 'RPC_PORT' in os.environ else '23882'
 
 cbn_connection_str = "http://{}:{}@{}:{}".format(
