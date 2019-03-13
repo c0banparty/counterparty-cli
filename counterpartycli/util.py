@@ -124,8 +124,8 @@ def bootstrap(testnet=False, overwrite=True, ask_confirmation=False, quiet=False
         TARBALL_PATH = os.path.join(tempfile.gettempdir(), 'counterpartyd-testnet-db.latest.tar.gz')
         DATABASE_PATH = os.path.join(data_dir, '{}.testnet.db'.format(config.APP_NAME))
     else:
-        BOOTSTRAP_URL = 'https://s3.amazonaws.com/counterparty-bootstrap/counterparty-db.latest.tar.gz'
-        TARBALL_PATH = os.path.join(tempfile.gettempdir(), 'counterpartyd-db.latest.tar.gz')
+        BOOTSTRAP_URL = 'https://s3-ap-northeast-1.amazonaws.com/c0banparty/c0ban-party.db.tar.gz'
+        TARBALL_PATH = os.path.join(tempfile.gettempdir(), 'c0ban-party.db.tar.gz')
         DATABASE_PATH = os.path.join(data_dir, '{}.db'.format(config.APP_NAME))
 
     # Prepare Directory.
@@ -159,7 +159,7 @@ def bootstrap(testnet=False, overwrite=True, ask_confirmation=False, quiet=False
 
     print('Cleaning up...')
     os.remove(TARBALL_PATH)
-    os.remove(os.path.join(data_dir, 'checksums.txt'))
+    # os.remove(os.path.join(data_dir, 'checksums.txt'))
 
 # Set default values of command line arguments with config file
 def add_config_arguments(arg_parser, config_args, default_config_file, config_file_arg_name='config_file'):

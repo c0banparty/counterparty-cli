@@ -15,7 +15,8 @@ from counterpartycli.util import add_config_arguments, bootstrap
 from counterpartycli.setup import generate_config_files
 from counterpartycli import APP_VERSION
 
-APP_NAME = 'counterparty-server'
+XCP_NAME = 'c0ban-party'
+APP_NAME = XCP_NAME.lower()
 
 CONFIG_ARGS = [
     [('-v', '--verbose'), {'dest': 'verbose', 'action': 'store_true', 'default': False, 'help': 'sets log level to DEBUG instead of WARNING'}],
